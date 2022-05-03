@@ -1,0 +1,184 @@
+/* ----------------------- */
+/*       variables         */
+/* ----------------------- */
+
+:root {
+  --soft-green: hsl(149, 51%, 70%);
+  --lime: hsl(112, 100%, 50%);
+  --lime-rgba: rgba(34, 255, 0, 0.3);
+  --card-bg: hsl(150, 50%, 16%);
+  --main-bg: hsl(151, 54%, 11%);
+  --line: hsl(149, 32%, 27%);
+}
+
+/* ----------------------- */
+/*         RESET           */
+/* ----------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.vorlage {
+  width: 100vw;
+  position: absolute;
+  z-index: 9;
+  opacity: 0.5;
+  left: 0;
+  top: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ----------------------- */
+/*         MOBILE          */
+/* ----------------------- */
+
+body {
+  display: grid;
+  flex-direction: column;
+  background-color: var(--main-bg);
+  font-family: "Outfit", sans-serif;
+  padding: 2rem;
+}
+
+.preview-card {
+  margin-top: 38px;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 25px;
+  background-color: var(--card-bg);
+  place-self: center center;
+}
+
+.preview-image {
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 24px;
+}
+
+h1 {
+  padding-top: 1.4rem;
+  font-size: 1.6rem;
+  color: white;
+  letter-spacing: 0.1px;
+}
+
+p {
+  padding-top: 0.95rem;
+  font-size: 18px;
+  color: var(--soft-green);
+  letter-spacing: 0px;
+  line-height: 145%;
+}
+
+.price-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.2rem;
+  margin-right: 1.4rem;
+  font-size: 18px;
+}
+
+.price {
+  color: var(--lime);
+}
+
+.time {
+  color: var(--soft-green);
+}
+
+.price-icon {
+  position: relative;
+  top: 2px;
+}
+.clock-icon {
+  position: relative;
+  color: var(--soft-green);
+  top: 2px;
+}
+
+hr {
+  max-width: 93%;
+  color: var(--line);
+  margin-top: 1rem;
+  margin-left: 3.5%;
+}
+
+.avatar-image {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 36px;
+  margin-right: 1rem;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  color: var(--soft-green);
+  letter-spacing: 0.8px;
+}
+
+.white {
+  color: white;
+  margin-left: 5px;
+}
+
+/* ----------------------- */
+/*      ACTIVE-STATES      */
+/* ----------------------- */
+
+.heading:active {
+  color: var(--lime);
+}
+
+.white:active {
+  color: var(--lime);
+}
+
+.image-overlay {
+  position: relative;
+}
+
+.preview-image {
+  display: block;
+}
+
+.overlay {
+  display: grid;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  background: var(--lime-rgba);
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.overlay:active {
+  opacity: 1;
+}
+
+.view-icon {
+  place-self: center center;
+}
+
+/* ----------------------- */
+/*      DESKTOP-DESIGN     */
+/* ----------------------- */
+
+@media screen and (min-width: 700px) {
+  .preview-card {
+    max-width: 410px;
+    place-self: center center;
+    margin-top: 150px;
+  }
+}
